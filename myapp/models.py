@@ -46,7 +46,7 @@ class Tag(models.Model):
         return self.name
 
 class TaskStatus(models.Model):
-    task = models.OneToOneField(Task, on_delete=models.CASCADE, related_name='status')  # Changed to OneToOne
+    task = models.OneToOneField(Task, on_delete=models.CASCADE, related_name='status')
     completed = models.BooleanField(default=False)
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -54,7 +54,7 @@ class TaskStatus(models.Model):
         return f"Status for {self.task}: {'Completed' if self.completed else 'Pending'}"
 
 class Deadline(models.Model):
-    task = models.OneToOneField(Task, on_delete=models.CASCADE, related_name='deadline')  # OneToOne for clarity
+    task = models.OneToOneField(Task, on_delete=models.CASCADE, related_name='deadline')
     date = models.DateTimeField()
 
     def __str__(self):

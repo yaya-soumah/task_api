@@ -1,0 +1,60 @@
+.app {
+  text-align: left;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filters select, .filters input {
+  padding: 5px;
+  font-size: 16px;
+}
+
+.add-task {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.add-task input, .add-task select {
+  padding: 5px;
+  font-size: 16px;
+}
+
+.add-task button {
+  padding: 5px 10px;
+  background: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.tasks {
+  margin-bottom: 20px;
+}
+
+.tasks h2 {
+  margin: 10px 0;
+}
+
+.details {
+  border: 1px solid #ccc;
+  padding: 10px;
+  background: #f9f9f9;
+}
+
+.details p {
+  margin: 5px 0;
+}
