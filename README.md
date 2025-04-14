@@ -3,21 +3,21 @@
 This is a **Task Tracker API** built with Django to mess with tasks—regular ones and urgent ones that have sub-tasks and dependencies. 
 
 ## What’s It Got?
-- Tasks—regular or urgent with extra stuff like dependencies.
-- Sub-tasks that stack up with a depth thing to track.
-- API to add, change, or delete tasks.
-- React mockup—shows tasks all fancy-like in a tree view.
+- Urgent tasks—priorities (1-5), sub-tasks, dependencies, depth, tags, comments, projects.
+- Regular tasks—notes and priorities.
+- API for listing, creating, updating, deleting tasks, plus progress calcs (JWT auth locked).
+- React mockup—filters, task creation, and detailed views.
 
 ## Tech Stack
-- Django and some REST bits
+- Django and REST Framework
 - PostgreSQL for data
-- Celery and Redis for slow stuff
-- React.js (just this once)
-- Render (free tier pain)
+- Celery and Redis for async
+- React.js (one-time flex)
+- Render (free tier struggles)
 
 ## Setup
-1. Grab it: `git clone https://github.com/yaya-soumah/task_api.git`
-2. Stick keys in `.env`—database, Redis, secret stuff.
+1. Clone it: `git clone https://github.com/yaya-soumah/task_api.git`
+2. Add `.env`—database, Redis, secrets.
 3. Install: `pip install -r requirements.txt`
 4. Migrate: `python manage.py migrate`
 5. Run: `python manage.py runserver` + `celery -A task_api worker -l info`
