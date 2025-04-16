@@ -11,7 +11,6 @@ This is a **Task Tracker API** built with Django to mess with tasks—regular on
 ## Tech Stack
 - Django and REST Framework
 - PostgreSQL for data
-- Celery and Redis for async
 - React.js (one-time flex)
 - Render (free tier struggles)
 
@@ -20,7 +19,7 @@ This is a **Task Tracker API** built with Django to mess with tasks—regular on
 2. Add `.env`—database, Redis, secrets.
 3. Install: `pip install -r requirements.txt`
 4. Migrate: `python manage.py migrate`
-5. Run: `python manage.py runserver` + `celery -A task_api worker -l info`
+5. Run: `python manage.py runserver` 
 
 ## Usage
 - Get token: `POST http://localhost:8000/v1/api/token/` with `{"username": "you", "password": "pass"}`.
